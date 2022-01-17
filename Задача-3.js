@@ -22,7 +22,7 @@ console.log( 'unknown' );
 ```*/
 const val = 'd'
 
-if (val == 'a') {
+if (val === 'a') {
     console.log( 'a' ) }
     else {
         if (val ['b','c','d','e']) {
