@@ -20,12 +20,12 @@ default:
 console.log( 'unknown' );
 }
 ```*/
-let val = 'd'
+const val = 'd'
 
 if (val == 'a') {
     console.log( 'a' ) }
     else {
-        if ((val == 'b') | (val == 'c') | (val == 'd') | (val == 'e')) {
+        if (val ['b','c','d','e']) {
             console.log('others')
         }
         else {
