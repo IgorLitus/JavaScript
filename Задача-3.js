@@ -25,7 +25,7 @@ const val = 'd'
 if (val === 'a') {
     console.log( 'a' ) }
     else {
-        if (val ['b','c','d','e']) {
+        if (val in ['b','c','d','e']) {
             console.log('others')
         }
         else {
