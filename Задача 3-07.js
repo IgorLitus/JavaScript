@@ -9,12 +9,20 @@ getDivisors(0); // Error: parameter can't be a 0
 ```
 */
 function getDivision(x) {
+    console.log(x)
   if (typeof x != 'number') {
       throw new Error('Параметр повинен бути типу number')
-  }
-  if ( x <= 0) {
+  } 
+
+  if ( x < 0) {
     throw new Error('Параметр повинен бути додатковим')
   }
+
+  if ( x === 0) {
+         throw new Error('Параметр не може бути 0')
+  }
+    
+
   arr=[1]
   if ( x > 1 ) {
     for (i=2; i<=x; i++){
@@ -26,6 +34,6 @@ function getDivision(x) {
   return arr
 }
   
-//getDivision('Content')
-//getDivision(0)
-console.log(getDivision(24))
+// getDivision('Content')
+getDivision(0)
+//console.log(getDivision(24))
