@@ -19,17 +19,17 @@ f([]) // Error: parameter can't be an empty
 */
 var x = []
 
-function vybir(arr) {
+function f(arr) {
     if (arr.length === 0) {
         return
     }
     else {
         console.log(arr[0])
         v=arr.shift()
-        return vybir(arr)
+        return f(arr)
     }
 }
-
+// Немає сенсу кожного разу перевіряти в рекурсії вхідні параметри, перевіряемо до визову
 if (  (Array.isArray(x))) {
     if (x.length === 0){
         throw new Error('parameter can\'t be an empty')
@@ -39,4 +39,4 @@ else {
     throw new Error('parameter type should be an array')
 }
   
-vybir(x)
+f(x)
