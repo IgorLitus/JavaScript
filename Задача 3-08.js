@@ -24,8 +24,7 @@ function f(arr) {
         return
     }
     else {
-        console.log(arr[0])
-        v=arr.shift()
+        console.log(arr.shift())
         return f(arr)
     }
 }
