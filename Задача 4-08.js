@@ -22,12 +22,9 @@ const arr5 = [[[[[],3]]]];
 console.log(f(arr5)) // 3
 
 function f(arr1){
-while (arr1.some(function(i){return (Array.isArray(i))} )) {
-   arr1 = arr1.flat()
-}
+   arr1 = arr1.flat(Infinity)
 if (arr1.some(function(i){return (typeof i != 'number')})){
-// какая-то обработка
-   console.log('Не всі елементи масиву Number чі Array');
+   console.log('Не всі елементи масиву Number чі Array') // какая-то обработка
    return 0
 }
 if (arr1.length === 0) {
@@ -36,17 +33,3 @@ if (arr1.length === 0) {
    
 return arr1.reduce(function(sum,i){return sum+i})
 }
-// console.log(f(arr) )
-// Еще один вариант
-// function f1(arr) {
-//    let arrStr=(arr.toString()).split(',')
-//    let arrNew=arrStr.map(function(i){return Number(i)})
-//    if (arrNew.every(function(i) {return (isNaN(i) === false) }) != true) {
-// //       throw new Error('Всі елементи масиву повинні бути Number')
-//        return 0
-//    }
-//    else {
-//        return arrNew.reduce(function(sum,i){return sum+i})
-//    }
-// }
- // console.log(f(arr5));
