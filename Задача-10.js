@@ -5,16 +5,20 @@
 ```javascript
 */
 
-var arr = [6,5,4,3,2,1];
-let a;
-let n=arr.length-1;
-for (j=n ; j>0 ;j-- ){
-    for (i=0 ; i<j; i++) {
-        if (arr[i]>arr[i+1]){
-            a=arr[i]
-            arr[i] = arr[i+1]
-            arr[i+1] = a
-        }
+console.log(reverse([3,2,1]))
+
+function reverse(arr){
+  if (Array.isArray(arr)) {
+      if (arr.length === 0) {
+        throw new Error( 'Масив не може бути пустим')
+      }
+    arrNew = []
+    for (i=0; i<arr.length; i++){
+       arrNew.unshift(arr[i])
     }
+    return arrNew
+  }
+  else {
+      throw new Error('Параметер повинен бути Масив')
+  }
 }
-console.log(arr)
