@@ -23,13 +23,13 @@ console.log(f(arr5)) // 3
 
 function f(arr1){
    arr1 = arr1.flat(Infinity)
-if (arr1.some(function(i){return (typeof i != 'number')})){
-   console.log('Не всі елементи масиву Number чі Array') // какая-то обработка
-   return 0
-}
-if (arr1.length === 0) {
-    return 0
-}
+   if (arr1.some(function(i){return (typeof i != 'number')})){
+      console.log('Не всі елементи масиву Number чі Array') // какая-то обработка
+      return 0
+   }
+   if (arr1.length === 0) {
+       return 0
+   }
    
-return arr1.reduce(function(sum,i){return sum+i})
+   return arr1.reduce(function(sum,i){return sum+i})
 }
